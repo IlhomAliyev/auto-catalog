@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 20px;
+  background-color: #414a62;
+}
+
+.link {
+  color: white;
+  transition: color 0.2s ease-in-out;
+  position: relative;
+
+  &:hover,
+  &.active {
+    color: #c353c3;
+  }
+
+  &::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: #c353c3;
+    transition: 100ms;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
